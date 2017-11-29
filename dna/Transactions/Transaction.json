@@ -1,0 +1,24 @@
+{
+  "title": "transaction schema",
+  "type": "object",
+  "properties": {
+    "from": {
+      "type": "string"
+    },
+    "to": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "from",
+    "to",
+    "amount"
+  ],
+  "id": "http://example.com/transactions/transaction.json"
+}

@@ -1,0 +1,62 @@
+{
+    "Tests": [
+        {
+            "Convey": "Create new transaction",
+            "Zome": "Transactions",
+            "FnName": "TransactionCreate",
+            "Input": {
+                "amount": 521,
+                "description": "Sending 521",
+                "role": "spender",
+                "who": "QmUMiFEhYr6C3Fp5XDyQ2ZG4mYoKJb2jT3kRvqP13jjpdZ"
+            },
+            "Output": "%h0%",
+            "Err": "",
+            "Regexp": "",
+            "Time": 0,
+            "Wait": 2000,
+            "Exposure": "public",
+            "Raw": false,
+            "Repeat": 0
+        },
+        {
+            "Convey": "Read transaction",
+            "Zome": "Transactions",
+            "FnName": "TransactionRead",
+            "Input": {
+                "transaction": "%h0%"
+            },
+            "Output": {
+                "amount": 521,
+                "description": "Sending 521",
+                "from": "%key%",
+                "to": "QmUMiFEhYr6C3Fp5XDyQ2ZG4mYoKJb2jT3kRvqP13jjpdZ"
+            },
+            "Err": "",
+            "Regexp": "",
+            "Time": 0,
+            "Wait": 0,
+            "Exposure": "public",
+            "Raw": false,
+            "Repeat": 0
+        },
+        {
+            "Convey": "Get Balance",
+            "Zome": "Transactions",
+            "FnName": "GetBalance",
+            "Input": {},
+            "Output": -521,
+            "Err": "",
+            "Regexp": "",
+            "Time": 0,
+            "Wait": 0,
+            "Exposure": "public",
+            "Raw": false,
+            "Repeat": 0
+        }
+    ],
+    "Identity": "",
+    "Fixtures": {
+        "Agents": null
+    }
+}

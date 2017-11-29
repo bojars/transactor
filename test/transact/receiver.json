@@ -1,0 +1,43 @@
+{
+    "Tests": [
+        {
+            "Convey": "Read transaction",
+            "Zome": "Transactions",
+            "FnName": "TransactionRead",
+            "Input": {
+                "transaction": "%h0%"
+            },
+            "Output": {
+                "amount": 521,
+                "description": "Sending 521",
+                "from": "QmSNGfzv8RfGkJHjEcUEsBPAMBn4fqQStH88w29bZGyDLs",
+                "to": "%key%"
+            },
+            "Err": "",
+            "Regexp": "",
+            "Time": 0,
+            "Wait": 4000,
+            "Exposure": "public",
+            "Raw": false,
+            "Repeat": 0
+        },
+        {
+            "Convey": "Get balance",
+            "Zome": "Transactions",
+            "FnName": "GetBalance",
+            "Input": {},
+            "Output": 521,
+            "Err": "",
+            "Regexp": "",
+            "Time": 0,
+            "Wait": 0,
+            "Exposure": "public",
+            "Raw": false,
+            "Repeat": 0
+        }
+    ],
+    "Identity": "",
+    "Fixtures": {
+        "Agents": null
+    }
+}

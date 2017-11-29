@@ -1,0 +1,70 @@
+{
+    "Version": 1,
+    "UUID": "a6e66c32-69db-429c-9352-c28b8fdfb9e5",
+    "Name": "transactor",
+    "Properties": {
+        "description": "Mutual credit system for Scouter",
+        "language": "en"
+    },
+    "PropertiesSchemaFile": "properties_schema.json",
+    "BasedOn": {
+        "H": null
+    },
+    "Zomes": [
+        {
+            "Name": "Transactions",
+            "Description": "Execution and validation of transactions",
+            "CodeFile": "Transactions.js",
+            "Entries": [
+                {
+                    "Name": "Transaction",
+                    "DataFormat": "json",
+                    "Schema": "",
+                    "SchemaFile": "Transaction.json",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "ProofOfDeposit",
+                    "DataFormat": "json",
+                    "Schema": "",
+                    "SchemaFile": "ProofOfDeposit.json",
+                    "Sharing": "public"
+                }
+            ],
+            "RibosomeType": "js",
+            "Functions": [
+                {
+                    "Name": "TransactionCreate",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "TransactionRead",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "ProofOfDepositCreate",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "GetBalance",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                }
+            ],
+            "BridgeFuncs": null,
+            "BridgeTo": ""
+        }
+    ],
+    "RequiresVersion": 0,
+    "DHTConfig": {
+        "HashType": "sha2-256",
+        "NeighborhoodSize": 0
+    },
+    "Progenitor": {
+        "Identity": "",
+        "PubKey": null
+    }
+}
