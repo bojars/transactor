@@ -9,13 +9,12 @@ function send(fn,data,resultFn) {
     console.log("calling: " + fn+" with "+JSON.stringify(data));
     $.post(
         "/fn/Transactions/"+fn,
-        data,
+        JSON.stringify(data),
         function(response) {
             console.log("response: " + response);
             resultFn(JSON.parse(response));
         }
     ).error(function(response) {
         console.log("response failed: " + response.responseText);
-    })
-    ;
-};
+    });
+}

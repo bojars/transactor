@@ -22,9 +22,11 @@ function Transact() {
     var tx = {
         who: $("#to").val(),
         role: "spender",
-        amount: $("#amount").val(),
+        amount: parseFloat($("#amount").val()),
         description: $("#desc").val()
     };
+
+    // var tx = $('#transact-form').serialize();
 
     send("TransactionCreate",tx, function(result) {
         GetBalance();
