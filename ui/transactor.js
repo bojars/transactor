@@ -18,12 +18,12 @@ function updateProfile(details) {
     $("#address").html(details.pub);
 }
 
-function Tansact() {
+function Transact() {
     var tx = {
-        who: $("#to"),
+        who: $("#to").val(),
         role: "spender",
-        amount: $("#amount"),
-        description: $("#desc")
+        amount: $("#amount").val(),
+        description: $("#desc").val()
     };
 
     send("TransactionCreate",tx, function(result) {
