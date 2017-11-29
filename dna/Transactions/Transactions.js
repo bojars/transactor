@@ -268,3 +268,11 @@ function GetBalance() {
 
   return balance
 }
+
+
+
+function GetUserProfile() {
+  return {
+    pub: App.Key.Hash
+  }
+}

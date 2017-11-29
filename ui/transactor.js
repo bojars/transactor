@@ -1,12 +1,21 @@
 function GetBalance() {
-    send("GetBalance","", function(result) {
+    send("GetBalance", "", function(result) {
         updateBalance(result);
-
     });
 }
 
 function updateBalance(balance) {
     $("#balance").html(balance);
+}
+
+function GetUserProfile() {
+    send("GetUserProfile", "", function(result) {
+        updateProfile(result);
+    });
+}
+
+function updateProfile(details) {
+    $("#address").html(details.pub);
 }
 
 function Tansact() {
@@ -24,4 +33,5 @@ function Tansact() {
 
 $(window).ready(function() {
     GetBalance();
+    GetUserProfile();
 });

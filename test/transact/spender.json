@@ -53,6 +53,22 @@
             "Exposure": "public",
             "Raw": false,
             "Repeat": 0
+        },
+        {
+            "Convey": "Get User Profile",
+            "Zome": "Transactions",
+            "FnName": "GetUserProfile",
+            "Input": {},
+            "Output": {
+              "pub": "%key%"
+            },
+            "Err": "",
+            "Regexp": "",
+            "Time": 0,
+            "Wait": 0,
+            "Exposure": "public",
+            "Raw": false,
+            "Repeat": 0
         }
     ],
     "Identity": "",

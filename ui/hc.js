@@ -12,7 +12,7 @@ function send(fn,data,resultFn) {
         data,
         function(response) {
             console.log("response: " + response);
-            resultFn(response);
+            resultFn(JSON.parse(response));
         }
     ).error(function(response) {
         console.log("response failed: " + response.responseText);

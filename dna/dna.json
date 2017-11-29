@@ -52,6 +52,11 @@
                     "Name": "GetBalance",
                     "CallingType": "json",
                     "Exposure": "public"
+                },
+                {
+                    "Name": "GetUserProfile",
+                    "CallingType": "json",
+                    "Exposure": "public"
                 }
             ],
             "BridgeFuncs": null,
