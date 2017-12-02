@@ -8,7 +8,7 @@
                 "amount": 521,
                 "description": "Sending 521",
                 "role": "spender",
-                "who": "QmUMiFEhYr6C3Fp5XDyQ2ZG4mYoKJb2jT3kRvqP13jjpdZ"
+                "who": "%receiver_key%"
             },
             "Output": "%h0%",
             "Err": "",
@@ -30,7 +30,7 @@
                 "amount": 521,
                 "description": "Sending 521",
                 "from": "%key%",
-                "to": "QmUMiFEhYr6C3Fp5XDyQ2ZG4mYoKJb2jT3kRvqP13jjpdZ"
+                "to": "%receiver_key%"
             },
             "Err": "",
             "Regexp": "",
